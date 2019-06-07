@@ -22,7 +22,7 @@
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <input id="email" type="text" class="form-username form-control" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" data-pattern-error="Invalid email address" value="{{ old('email') }}" placeholder="E-mail..." required>
+                        <input id="email" type="text" class="form-control" name="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" data-pattern-error="Invalid email address" value="{{ old('email') }}" placeholder="E-mail..." required>
                         <div class="help-block with-errors"></div>
                         @if ($errors->has('email'))
                         <span class="help-block">
@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                        <input id="password" type="password" class="form-control form-password" placeholder="Password..." name="password" required>
+                        <input id="password" type="password" class="form-control" placeholder="Password..." name="password" required>
                         <div class="help-block with-errors"></div>
                         @if ($errors->has('password'))
                         <span class="help-block">
