@@ -1,0 +1,24 @@
+body {
+  background-image: url('../img/bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content {
+  margin-top: 15em;
+}
+
+h1 {
+  text-align: center;
+}
+
+.left {
+  background: rgb(255, 255, 255, 0.7);
+  height: 22em;
+}
+
+.login-form {
+	margin-top: 4em;
+}
