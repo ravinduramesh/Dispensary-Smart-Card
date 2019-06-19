@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/font-awesome.min.css') }}">
+    <link href="../views/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/login.css') }}">
 </head>
 <body>
