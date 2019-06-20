@@ -20,7 +20,7 @@ class CreatePrescriptionsTable extends Migration
             $table->integer('patient_id')->unsigned();
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
             $table->integer('item_id')->unsigned();
-            $table->foreign('item_id')->references('id')->on('inventries')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('inventories')->onDelete('cascade');
             $table->integer('quantity');
             $table->timestamps();
         });
