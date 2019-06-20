@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,8 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/home', 'HomeController@index')->middleware('auth');
+Route::get('/home', 'PatientController@get_patients')->middleware('auth');
+Route::get('/add_patient', 'PatientController@add_patient')->middleware('auth');
+Route::post('/insert_patient', 'PatientController@insert_patient')->middleware('auth');
+Route::get('/edit_patient/{id}', 'PatientController@edit_patient')->middleware('auth');
+Route::post('/update_patient', 'PatientController@update_patient')->middleware('auth');
