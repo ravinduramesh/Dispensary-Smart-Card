@@ -14,10 +14,17 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
+<<<<<<< HEAD:resources/views/inventories/inventories_views.blade.php
     <!-- <link href="resources/views/assets/css/" rel="stylesheet" /> -->
     <link rel="stylesheet" href="<?php echo asset('css/material-dashboard.css')?>" type="text/css"> 
     <link rel="stylesheet" href="<?php echo asset('css/demo/demo.css')?>" type="text/css">
     
+=======
+    <link href="../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    <link href="../views/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/demo/demo.css" rel="stylesheet" />
+>>>>>>> 445165375ffe8fc912335a3735a1c4922065a19c:resources/views/inventories_views.php
 </head>
 
 <body class="">
