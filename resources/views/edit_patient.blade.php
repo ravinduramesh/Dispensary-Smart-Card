@@ -10,7 +10,7 @@
             <p class="card-category">Edit patient's details who has a smart card</p>
           </div>
           <div class="card-body">
-            <form action="{{ url('/update_patient') }}" method="post">
+            <form action="{{ url('/update_patient/'.$patient->id) }}" method="post">
               {{ csrf_field() }}
               <div class="row">
                 <div class="col-md-6">
@@ -64,7 +64,7 @@
                 <div class="col-md-6">
                   <div class="form-group {{ $errors->has('dob') ? ' has-error' : '' }}">
                     <label>Date Of Birth</label>
-                    <input name="dob" type="date" class="form-control" required="required" value="{{ $patient->dob }}">
+                    <input name="dob" type="date" class="form-control" required="required" value="{{ date('Y-m-d', strtotime($patient->dob)) }}">
                     <div class="help-block with-errors"></div>
                     @if ($errors->has('dob'))
                     <span class="help-block">
@@ -88,15 +88,15 @@
                 <div class="col-md-6">
                   <div class="form-group {{ $errors->has('blood_group') ? ' has-error' : '' }}">
                     <label for="blood_group">Blood Group</label>
-                    <select class="form-control" name="blood_group" id="blood_group">
-                      <option value="A+">A+</option>
-                      <option value="A-">A-</option>
-                      <option value="B+">B+</option>
-                      <option value="B-">B-</option>
-                      <option value="O+">O+</option>
-                      <option value="O-">O-</option>
-                      <option value="AB+">AB+</option>
-                      <option value="AB-">AB-</option>
+                    <select class="form-control" name="blood_group">
+                      <option value="A+" {{ $patient->blood_group == "A+" ? "selected" : "" }}>A+</option>
+                      <option value="A-" {{ $patient->blood_group == "A-" ? "selected" : "" }}>A-</option>
+                      <option value="B+" {{ $patient->blood_group == "B+" ? "selected" : "" }}>B+</option>
+                      <option value="B-" {{ $patient->blood_group == "B-" ? "selected" : "" }}>B-</option>
+                      <option value="O+" {{ $patient->blood_group == "O+" ? "selected" : "" }}>O+</option>
+                      <option value="O-" {{ $patient->blood_group == "O-" ? "selected" : "" }}>O-</option>
+                      <option value="AB+" {{ $patient->blood_group == "AB+" ? "selected" : "" }}>AB+</option>
+                      <option value="AB-" {{ $patient->blood_group == "AB-" ? "selected" : "" }}>AB-</option>
                     </select>
                     <div class="help-block with-errors"></div>
                     @if ($errors->has('blood_group'))
@@ -109,9 +109,9 @@
                 <div class="col-md-6">
                   <div class="form-group {{ $errors->has('male') ? ' has-error' : '' }}">
                     <label class="radio-inline">Gender</label>
-                    <select class="form-control" name="male" id="male">
-                      <option value="1">Male</option>
-                      <option value="0">Female</option>
+                    <select class="form-control" name="male">
+                      <option value="1" {{ $patient->male == "1" ? "selected" : "" }}>Male</option>
+                      <option value="0" {{ $patient->male == "0" ? "selected" : "" }}>Female</option>
                     </select>
                     @if ($errors->has('male'))
                     <span class="help-block">
@@ -121,7 +121,7 @@
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary pull-right">Add Patient</button>
+                <button type="submit" class="btn btn-primary pull-right">Update Patient</button>
                 <button type="reset" class="btn btn-primary pull-right">Clear</button>
                 <div class="clearfix"></div>
             </form>
@@ -132,10 +132,7 @@
   </div>
 </div>
 <script>
-  var element = document.getElementById("list_patient");
+  var element = document.getElementById("list_patients");
   element.classList.add("active");
-  
-  document.getElementById('blood_group').value="{{ $patient->blood_group }}";
-  document.getElementById('male').value="{{ $patient->male }}";
 </script>
 @endsection

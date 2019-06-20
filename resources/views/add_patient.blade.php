@@ -132,7 +132,7 @@
   </div>
 </div>
 <script>
-  var element = document.getElementById("list_patient");
+  var element = document.getElementById("add_patient");
   element.classList.add("active");
 </script>
 @endsection

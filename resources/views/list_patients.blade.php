@@ -11,7 +11,7 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table">
+              <table class="table" id="patientsTable">
                 <thead class=" text-primary">
                   <th>#</th>
                   <th>Name</th>

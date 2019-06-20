@@ -59,7 +59,7 @@ class PatientController extends Controller
 			'address' => 'required',
 			'male' => 'required',
 			'dob' => 'required',
-			'nic' => 'required|unique:patients|min:10',
+			'nic' => 'required|min:10',
 			'blood_group' => 'required',
 			'contact' => 'required',
 		]);
