@@ -17,4 +17,10 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
+
+
+
 Route::get('/home', 'HomeController@index')->middleware('auth');
+Route::resource('allergies','AllergiesController');
+Route::resource('inventories','InventoriesController');
+Route::post('addInventories','InventoriesController@store');
