@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+<!-- All bills -->
 <html lang="en">
 
 <head>
@@ -14,10 +16,10 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
-    <link href="../views/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    <link href="../../views/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
     
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../views/assets/demo/demo.css" rel="stylesheet" />
+    <link href="../../views/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -97,7 +99,7 @@
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="#pablo">Bills Table</a>
+                    <a class="navbar-brand" href="#pablo">Bills</a>
                 </div>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -160,194 +162,89 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="container mt-5 pt-5">
-            <button class="btn btn-primary pull-left">Add Bills</button>
-        </div>
+        <!-- <div class="container mt-5 pt-5">
+            <button class="btn btn-primary pull-left">Add New Bill</button>
+        </div> -->
+        
+        
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <div class="card-header card-header-primary">
-                                <h4 class="card-title ">Bills Table</h4>
+                            <!-- <div class="card-header card-header-primary">
+                                <h4 class="card-title ">Bills</h4>
+                            </div> -->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Bill ID : </td>
+                                                <td>1</td>
+                                                <td>Customer ID : </td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead class=" text-primary">
-                                            <th>
-                                                ID
-                                            </th>
-                                            <th>
-                                                Customer Id
-                                            </th>
-                                            <th>
-                                                Total price
-                                            </th>
-                                            <th style="width:  8.33%">
-                                            </th>
-                                            <th style="width: 5%">
-                                            </th>
+                                            <th>Item ID</th>
+                                            <th>Name</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price (Rs.)</th>
+                                            <th>Total (Rs.)</th>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                Dakota Rice
-                                            </td>
-                                            <td>
-                                                Detail
-                                            </td>
-                                            <td style="width:  10%">
-                                                    <button class="btn btn-primary pull-left">Edit</button>
-                                            </td>
-                                            <td style="width:  10%">
-                                                <button class="btn btn-primary pull-left">Delete</button>
-                                            </td>
+                                            <td>1</td>
+                                            <td>Panadol</td>
+                                            <td>10</td>
+                                            <td>5.00</td>
+                                            <td>50.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Vitamin C</td>
+                                            <td>30</td>
+                                            <td>10.00</td>
+                                            <td>300.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Piriton Syrup</td>
+                                            <td>1</td>
+                                            <td>800.00</td>
+                                            <td>800.00</td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Created Date : </td>
+                                                <td></td>
+                                                <td>Bill Total (Rs.) : </td>
+                                                <td>1150.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <button class="btn btn-primary pull-left">Print Bill</button>
+                            <button class="btn btn-primary pull-left">Back</button>
                         </div>
                     </div>
-                    <!--                    <div class="col-md-12">-->
-                    <!--                        <div class="card card-plain">-->
-                    <!--                            <div class="card-header card-header-primary">-->
-                    <!--                                <h4 class="card-title mt-0"> Table on Plain Background</h4>-->
-                    <!--                                <p class="card-category"> Here is a subtitle for this table</p>-->
-                    <!--                            </div>-->
-                    <!--                            <div class="card-body">-->
-                    <!--                                <div class="table-responsive">-->
-                    <!--                                    <table class="table table-hover">-->
-                    <!--                                        <thead class="">-->
-                    <!--                                        <th>-->
-                    <!--                                            ID-->
-                    <!--                                        </th>-->
-                    <!--                                        <th>-->
-                    <!--                                            Name-->
-                    <!--                                        </th>-->
-                    <!--                                        <th>-->
-                    <!--                                            Country-->
-                    <!--                                        </th>-->
-                    <!--                                        <th>-->
-                    <!--                                            City-->
-                    <!--                                        </th>-->
-                    <!--                                        <th>-->
-                    <!--                                            Salary-->
-                    <!--                                        </th>-->
-                    <!--                                        </thead>-->
-                    <!--                                        <tbody>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                1-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Dakota Rice-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Niger-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Oud-Turnhout-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $36,738-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                2-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Minerva Hooper-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Curaçao-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Sinaai-Waas-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $23,789-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                3-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Sage Rodriguez-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Netherlands-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Baileux-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $56,142-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                4-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Philip Chaney-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Korea, South-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Overland Park-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $38,735-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                5-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Doris Greene-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Malawi-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Feldkirchen in Kärnten-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $63,542-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        <tr>-->
-                    <!--                                            <td>-->
-                    <!--                                                6-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Mason Porter-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Chile-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                Gloucester-->
-                    <!--                                            </td>-->
-                    <!--                                            <td>-->
-                    <!--                                                $78,615-->
-                    <!--                                            </td>-->
-                    <!--                                        </tr>-->
-                    <!--                                        </tbody>-->
-                    <!--                                    </table>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
                 </div>
             </div>
         </div>
