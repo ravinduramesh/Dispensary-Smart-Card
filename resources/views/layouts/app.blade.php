@@ -38,6 +38,18 @@
               <p>Patients List</p>
             </a>
           </li>
+          <li class="nav-item" id="add_allergie">
+            <a class="nav-link" href="{{URL::to('add_allergie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Add Allergies</p>
+            </a>
+          </li>
+          <li class="nav-item" id="list_allergie">
+            <a class="nav-link" href="{{URL::to('get_allergie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Allergies List</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="./icons.html">
               <i class="material-icons">bubble_chart</i>
