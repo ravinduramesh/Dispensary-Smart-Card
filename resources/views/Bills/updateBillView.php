@@ -164,7 +164,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit Profile</h4>
+                  <h4 class="card-title">Edit Bill</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
                 <div class="card-body">
@@ -178,8 +178,8 @@
                       </div> -->
                       <div class="col-md-3">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
+                          <label class="">Bill ID</label>
+                          <input type="text" class="form-control" value="1">
                         </div>
                       </div>
                       <div class="col-md-4">

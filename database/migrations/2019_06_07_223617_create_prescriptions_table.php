@@ -19,9 +19,7 @@ class CreatePrescriptionsTable extends Migration
             $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->integer('patient_id')->unsigned();
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');
-            // $table->integer('item_id')->unsigned();
-            // $table->foreign('item_id')->references('id')->on('inventries')->onDelete('cascade');
-            $table->integer('quantity');
+            $table->string('description');
             $table->timestamps();
         });
     }
