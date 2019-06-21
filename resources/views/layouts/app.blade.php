@@ -50,6 +50,19 @@
               <p>Allergies List</p>
             </a>
           </li>
+          <!-- inventorie -->
+          <li class="nav-item" id="add_inventorie">
+            <a class="nav-link" href="{{URL::to('add_inventorie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Add Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item" id="list_inventorie">
+            <a class="nav-link" href="{{URL::to('get_inventorie')}}">
+              <i class="material-icons">assignment</i>
+              <p>inventories List</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="./icons.html">
               <i class="material-icons">bubble_chart</i>
