@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bill extends Model
+class Billitem extends Model
 {
     protected $fillable = [
-        'id', 'customer_id', 'total_price'
+        'id', 'bill_id', 'item_id', 'quantity', 'price'
     ];
 }

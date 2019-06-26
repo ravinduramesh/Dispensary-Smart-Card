@@ -14,9 +14,9 @@
               <table class="table" id="patientsTable">
                 <thead class=" text-primary">
                   <th>Bill ID</th>
-                  <th>Customer ID</th>
-                  <th>Total Price</th>
-                  <th>Created Date</th>
+                  <th>Item ID</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
                   <th></th>
                 </thead>
                 <tbody>
@@ -24,15 +24,10 @@
                   if (isset($bills)) {
                     foreach ($bills as $bill) { ?>
                       <tr>
-                        <td><?php echo ($bill->id) ?></td>
-                        <td><?php echo ($bill->customer_id) ?></td>
-                        <td><?php echo ($bill->total_price) ?></td>
-                        <td><?php echo (date("Y-m-d", strtotime($bill->created_at))) ?></td>
-                        <td>
-                          <a href="{{ url('/single_bill/'.$bill->id) }}" title="View Record" data-toggle="tooltip"><i class="material-icons">View</i></a>
-                          <a href="{{ url('/edit_bill/'.$bill->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
-                          <a href="{{ url('/confirmDelete/'.$bill->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
-                        </td>
+                        <td><?php echo ($bill->bill_id) ?></td>
+                        <td><?php echo ($bill->item_id) ?></td>
+                        <td><?php echo ($bill->quantity) ?></td>
+                        <td><?php echo ($bill->price) ?></td>
                       </tr>
                     <?php
                   }
@@ -48,7 +43,7 @@
   </div>
 </div>
 <script>
-  var element = document.getElementById("list_bills");
+  var element = document.getElementById("single_bill");
   element.classList.add("active");
 </script>
 @endsection

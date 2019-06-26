@@ -25,6 +25,7 @@ Route::get('/edit_patient/{id}', 'PatientController@edit_patient')->middleware('
 Route::post('/update_patient/{id}', 'PatientController@update_patient')->middleware('auth');
 
 Route::get('/bill_list', 'BillController@get_bills')->middleware('auth');
+Route::get('/single_bill/{id}', 'BillController@get_single_bill')->middleware('auth');
 Route::get('/add_bill', 'BillController@add_bill')->middleware('auth');
 Route::post('/insert_bill', 'BillController@bill_patient')->middleware('auth');
 Route::get('/edit_bill/{id}', 'BillController@edit_bill')->middleware('auth');

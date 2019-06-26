@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Bill;
+use App\Billitem;
 
 class BillController extends Controller
 {
-    public function get_bills()
-    {
+    public function get_bills(){
         $bills = Bill::orderBy('id', 'desc')->get();
     	return view('list_bills', ['bills'=>$bills]);
+    }
+
+    public function get_single_bill($id){
+		$bills = Billitem::where('bill_id', $id)->get();
+	    return view('single_bill', ['bills'=>$bills]);
     }
 
     public function add_bill()

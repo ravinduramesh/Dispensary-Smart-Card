@@ -14,13 +14,13 @@
               {{ csrf_field() }}
               <div class="row">
                 <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('first_name') ? ' has-error' : '' }}">
-                    <label>First Name</label>
-                    <input type="text" name="first_name" class="form-control" required="required" value="">
+                  <div class="form-group {{ $errors->has('id') ? ' has-error' : '' }}">
+                    <label>Prescription ID</label>
+                    <input type="text" name="id" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
-                    @if ($errors->has('first_name'))
+                    @if ($errors->has('id'))
                     <span class="help-block">
-                      <strong>{{ $errors->first('first_name') }}</strong>
+                      <strong>{{ $errors->first('id') }}</strong>
                     </span>
                     @endif
                   </div>
