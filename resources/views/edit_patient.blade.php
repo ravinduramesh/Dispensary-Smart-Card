@@ -120,10 +120,11 @@
                     @endif
                   </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary pull-right">Update Patient</button>
-                <button type="reset" class="btn btn-primary pull-right">Clear</button>
-                <div class="clearfix"></div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary pull-right">Update Patient</button>
+              <button type="reset" class="btn btn-primary pull-right">Clear</button>
+              <div class="clearfix"></div>
             </form>
           </div>
         </div>

@@ -12,8 +12,9 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   margin-top: 75px;
+  font-weight: 400;
 }
 
 .left {

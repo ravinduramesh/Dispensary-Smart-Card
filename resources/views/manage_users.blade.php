@@ -6,11 +6,11 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Add Patient</h4>
+            <h4 class="card-title">Add New User</h4>
             <p class="card-category">Add new patient and issue a smart card</p>
           </div>
           <div class="card-body">
-            <form action="{{ url('/insert_patient') }}" method="post">
+            <form action="{{ url('/insert_user') }}" method="post">
               {{ csrf_field() }}
               <div class="row">
                 <div class="col-md-6">
@@ -38,13 +38,13 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('address') ? ' has-error' : '' }}">
-                    <label>Address</label>
-                    <textarea name="address" class="form-control" required="required"></textarea>
+                  <div class="form-group {{ $errors->has('nic') ? ' has-error' : '' }}">
+                    <label>NIC</label>
+                    <input type="text" name="nic" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
-                    @if ($errors->has('address'))
+                    @if ($errors->has('nic'))
                     <span class="help-block">
-                      <strong>{{ $errors->first('address') }}</strong>
+                      <strong>{{ $errors->first('nic') }}</strong>
                     </span>
                     @endif
                   </div>
@@ -62,13 +62,13 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('dob') ? ' has-error' : '' }}">
-                    <label>Date Of Birth</label>
-                    <input name="dob" type="date" class="form-control" required="required" value="">
+                  <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                    <label>Email Address</label>
+                    <input name="email" type="email" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
-                    @if ($errors->has('dob'))
+                    @if ($errors->has('email'))
                     <span class="help-block">
-                      <strong>{{ $errors->first('dob') }}</strong>
+                      <strong>{{ $errors->first('email') }}</strong>
                     </span>
                     @endif
                   </div>
@@ -86,36 +86,17 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('blood_group') ? ' has-error' : '' }}">
-                    <label for="blood_group">Blood Group</label>
-                    <select class="form-control" name="blood_group">
-                      <option value="A+" selected="selected">A+</option>
-                      <option value="A-">A-</option>
-                      <option value="B+">B+</option>
-                      <option value="B-">B-</option>
-                      <option value="O+">O+</option>
-                      <option value="O-">O-</option>
-                      <option value="AB+">AB+</option>
-                      <option value="AB-">AB-</option>
+                  <div class="form-group {{ $errors->has('user_level') ? ' has-error' : '' }}">
+                    <label for="user_level">Blood Group</label>
+                    <select class="form-control" name="user_level">
+                      <option value="1" selected="selected">Administrator</option>
+                      <option value="2">Doctor</option>
+                      <option value="3">Pharmacist</option>
                     </select>
                     <div class="help-block with-errors"></div>
-                    @if ($errors->has('blood_group'))
+                    @if ($errors->has('user_level'))
                     <span class="help-block">
-                      <strong>{{ $errors->first('blood_group') }}</strong>
-                    </span>
-                    @endif
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('male') ? ' has-error' : '' }}">
-                    <label class="radio-inline">Gender</label>
-                    <select class="form-control" name="male">
-                      <option value="1" selected="selected">Male</option>
-                      <option value="0">Female</option>
-                    </select>
-                    @if ($errors->has('male'))
-                    <span class="help-block">
-                      <strong>{{ $errors->first('male') }}</strong>
+                      <strong>{{ $errors->first('user_level') }}</strong>
                     </span>
                     @endif
                   </div>
@@ -131,9 +112,45 @@
       </div>
     </div>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <?php
+      if (isset($users)) {
+        foreach ($users as $user) { ?>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card-header card-header-success">
+                <h4 class="card-title"><?php echo($user->first_name.' '.$user->last_name) ?></h4>
+                <p class="card-category">
+                  <?php
+                  if($user->user_level == 1) {
+                    echo('Administrator');
+                  } else if($user->user_level == 2) {
+                    echo('Doctor');
+                  } else {
+                    echo('Pharmacist');
+                  }
+                  ?>
+                </p>
+              </div>
+              <div class="card-body">
+                <img class="users-pro-pic" src="<?php echo ($user->pro_pic) ?>">
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+          </div>
+      <?php
+        }
+      }
+      ?>
+    </div>
+  </div>
 </div>
 <script>
-  var element = document.getElementById("add_patient");
+  var element = document.getElementById("manage_users");
   element.classList.add("active");
 </script>
 @endsection

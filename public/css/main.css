@@ -18819,4 +18819,7 @@ Copyright (c) 2015 Daniel Eden
   }
 }
 
-/*# sourceMappingURL=dashboard-free.css.map */
+.users-pro-pic {
+  width: 100%;
+  height: auto;
+}
