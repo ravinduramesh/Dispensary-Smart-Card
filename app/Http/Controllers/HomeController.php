@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Patient;
+use Auth;
 
 class HomeController extends Controller
 {
     public function index()
     {
-    	return view('home');
+        if (Auth::user()->user_level == 1) {
+            return redirect('manage_users');
+        } else if(Auth::user()->user_level == 2) {
+            return redirect('list_patients');
+        } else {
+            return redirect('list_patients'); //pharmacist home
+        }
     }
 }

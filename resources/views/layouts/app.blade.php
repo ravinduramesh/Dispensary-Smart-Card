@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="nav-item" id="list_patients">
-            <a class="nav-link" href="{{URL::to('home')}}">
+            <a class="nav-link" href="{{URL::to('list_patients')}}">
               <i class="material-icons">people</i>
               <p>Patients List</p>
             </a>

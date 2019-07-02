@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-header card-header-primary">
             <h4 class="card-title">Add New User</h4>
-            <p class="card-category">Add new patient and issue a smart card</p>
+            <p class="card-category">Add a new admin or a doctor or a pharmacist to the system</p>
           </div>
           <div class="card-body">
             <form action="{{ url('/insert_user') }}" method="post">
@@ -74,20 +74,20 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group {{ $errors->has('nic') ? ' has-error' : '' }}">
-                    <label>NIC</label>
-                    <input type="text" name="nic" class="form-control" required="required" value="">
+                  <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
-                    @if ($errors->has('nic'))
+                    @if ($errors->has('password'))
                     <span class="help-block">
-                      <strong>{{ $errors->first('nic') }}</strong>
+                      <strong>{{ $errors->first('password') }}</strong>
                     </span>
                     @endif
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group {{ $errors->has('user_level') ? ' has-error' : '' }}">
-                    <label for="user_level">Blood Group</label>
+                    <label for="user_level">User Level</label>
                     <select class="form-control" name="user_level">
                       <option value="1" selected="selected">Administrator</option>
                       <option value="2">Doctor</option>
@@ -102,7 +102,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <button type="submit" class="btn btn-primary pull-right">Add Patient</button>
               <button type="reset" class="btn btn-primary pull-right">Clear</button>
               <div class="clearfix"></div>
@@ -135,7 +135,7 @@
                 </p>
               </div>
               <div class="card-body">
-                <img class="users-pro-pic" src="<?php echo ($user->pro_pic) ?>">
+                <img class="users-pro-pic" src="<?php echo($user->pro_pic) ?>">
               </div>
               <div class="card-footer">
                 <button class="btn btn-danger">Delete</button>
