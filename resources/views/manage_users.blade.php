@@ -138,7 +138,7 @@
                 <img class="users-pro-pic" src="<?php echo($user->pro_pic) ?>">
               </div>
               <div class="card-footer">
-                <button class="btn btn-danger">Delete</button>
+                <a class="btn btn-danger" href="{{ url('/delete_user/'.$user->id) }}" style="margin:auto;display:block;" onclick="return confirm('Are you sure you want to delete this patient?');">Delete</a>
               </div>
             </div>
           </div>

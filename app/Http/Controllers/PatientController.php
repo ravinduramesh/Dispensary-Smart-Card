@@ -42,7 +42,7 @@ class PatientController extends Controller
 			'contact' => $request->contact
         ]);
 
-        return redirect('home');
+        return redirect('list_patients');
 	}
 
 	public function edit_patient($id)
@@ -75,6 +75,12 @@ class PatientController extends Controller
 			'contact' => $request->contact
         ]);
 
-        return redirect('home');
+        return redirect('list_patients');
+	}
+
+	public function delete_patient($id)
+	{
+		Patient::find($id)->delete();
+		return redirect('list_patients');
 	}
 }

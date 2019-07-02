@@ -27,22 +27,23 @@
                   if (isset($patients)) {
                     foreach ($patients as $patient) { ?>
                       <tr>
-                        <td><?php echo($patient->id) ?></td>
-                        <td><?php echo($patient->first_name.' '.$patient->last_name) ?></td>
-                        <td><?php echo($patient->address) ?></td>
-                        <td><?php echo(date("Y-m-d", strtotime($patient->dob))) ?></td>
-                        <td><?php echo($patient->nic) ?></td>
-                        <td><?php echo($patient->blood_group) ?></td>
-                        <td><?php echo($patient->contact) ?></td>
+                        <td><?php echo ($patient->id) ?></td>
+                        <td><?php echo ($patient->first_name . ' ' . $patient->last_name) ?></td>
+                        <td><?php echo ($patient->address) ?></td>
+                        <td><?php echo (date("Y-m-d", strtotime($patient->dob))) ?></td>
+                        <td><?php echo ($patient->nic) ?></td>
+                        <td><?php echo ($patient->blood_group) ?></td>
+                        <td><?php echo ($patient->contact) ?></td>
                         <td>
+                          <a href="{{ url('/print_smart_card/'.$patient->id) }}" title="Print Smart Card" data-toggle="tooltip"><i class="material-icons">print</i></a>
                           <a href="{{ url('/edit_patient/'.$patient->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
-                          <a href="{{ url('/confirmDelete/'.$patient->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
+                          <a href="{{ url('/delete_patient/'.$patient->id) }}" title="Delete Record" data-toggle="tooltip" onclick="return confirm('Are you sure you want to delete this patient?');"><i class="material-icons">delete_forever</i></a>
                         </td>
                       </tr>
                     <?php
+                    }
                   }
-                }
-                ?>
+                  ?>
                 </tbody>
               </table>
             </div>

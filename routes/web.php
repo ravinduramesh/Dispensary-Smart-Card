@@ -19,11 +19,13 @@ Route::get('/', function () {
 });
 Route::get('/home', 'HomeController@index')->middleware('auth');
 
-Route::get('/list_patients', 'PatientController@get_patients')->middleware('auth');
-Route::get('/add_patient', 'PatientController@add_patient')->middleware('auth');
-Route::post('/insert_patient', 'PatientController@insert_patient')->middleware('auth');
-Route::get('/edit_patient/{id}', 'PatientController@edit_patient')->middleware('auth');
-Route::post('/update_patient/{id}', 'PatientController@update_patient')->middleware('auth');
+Route::get('/list_patients', 'PatientController@get_patients')->middleware('auth','doctor');
+Route::get('/add_patient', 'PatientController@add_patient')->middleware('auth','doctor');
+Route::post('/insert_patient', 'PatientController@insert_patient')->middleware('auth','doctor');
+Route::get('/edit_patient/{id}', 'PatientController@edit_patient')->middleware('auth','doctor');
+Route::post('/update_patient/{id}', 'PatientController@update_patient')->middleware('auth','doctor');
+Route::get('/delete_patient/{id}', 'PatientController@delete_patient')->middleware('auth','doctor');
 
 Route::get('/manage_users', 'UserController@manage_users')->middleware('auth','admin');
 Route::post('/insert_user', 'UserController@insert_user')->middleware('auth','admin');
+Route::get('/delete_user/{id}', 'UserController@delete_user')->middleware('auth','admin');

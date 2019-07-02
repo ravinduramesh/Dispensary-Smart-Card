@@ -37,5 +37,11 @@ class UserController extends Controller
         ]);
 
         return redirect('manage_users');
-	}
+    }
+    
+    public function delete_user($id)
+    {
+        User::find($id)->delete();
+        return redirect('manage_users');
+    }
 }
