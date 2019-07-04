@@ -44,6 +44,32 @@
               <p>Add Patient</p>
             </a>
           </li>
+
+          <li class="nav-item" id="add_allergie">
+            <a class="nav-link" href="{{URL::to('add_allergie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Add Allergies</p>
+            </a>
+          </li>
+          <li class="nav-item" id="list_allergie">
+            <a class="nav-link" href="{{URL::to('get_allergie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Allergies List</p>
+            </a>
+          </li>
+          <!-- inventorie -->
+          <li class="nav-item" id="add_inventorie">
+            <a class="nav-link" href="{{URL::to('add_inventorie')}}">
+              <i class="material-icons">assignment</i>
+              <p>Add Inventory</p>
+            </a>
+          </li>
+          <li class="nav-item" id="list_inventorie">
+            <a class="nav-link" href="{{URL::to('get_inventorie')}}">
+              <i class="material-icons">assignment</i>
+              <p>inventories List</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
