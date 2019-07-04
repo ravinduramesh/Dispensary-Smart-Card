@@ -83,4 +83,10 @@ class PatientController extends Controller
 		Patient::find($id)->delete();
 		return redirect('list_patients');
 	}
+
+	public function print_smart_card($id)
+	{
+		$patient = Patient::where('id',$id)->first();
+		return view('print_smart_card', ['patient'=>$patient]);
+	}
 }

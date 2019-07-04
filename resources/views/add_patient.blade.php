@@ -122,7 +122,7 @@
                 </div>
               </div>
               
-              <button type="submit" class="btn btn-primary pull-right">Add Patient</button>
+              <button type="submit" class="btn btn-primary pull-right">Add New User</button>
               <button type="reset" class="btn btn-primary pull-right">Clear</button>
               <div class="clearfix"></div>
             </form>

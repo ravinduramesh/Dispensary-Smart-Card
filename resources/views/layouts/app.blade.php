@@ -26,10 +26,10 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item" id="add_patient">
-            <a class="nav-link" href="{{URL::to('add_patient')}}">
-              <i class="material-icons">person_add</i>
-              <p>Add Patient</p>
+          <li class="nav-item" id="manage_users">
+            <a class="nav-link" href="{{URL::to('manage_users')}}">
+              <i class="material-icons">settings</i>
+              <p>Manage Users</p>
             </a>
           </li>
           <li class="nav-item" id="list_patients">
@@ -38,10 +38,10 @@
               <p>Patients List</p>
             </a>
           </li>
-          <li class="nav-item" id="manage_users">
-            <a class="nav-link" href="{{URL::to('manage_users')}}">
-              <i class="material-icons">settings</i>
-              <p>Manage Users</p>
+          <li class="nav-item" id="add_patient">
+            <a class="nav-link" href="{{URL::to('add_patient')}}">
+              <i class="material-icons">person_add</i>
+              <p>Add Patient</p>
             </a>
           </li>
         </ul>
@@ -63,7 +63,7 @@
           <div class="collapse navbar-collapse justify-content-end">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#pablo">
+                <a class="nav-link" href="{{URL::to('home')}}">
                   <i class="material-icons">dashboard</i>
                   <p class="d-lg-none d-md-block">
                     Stats
@@ -96,23 +96,8 @@
           <nav class="float-left">
             <ul>
               <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
+                <a href="">
+                  Developed by Team 18
                 </a>
               </li>
             </ul>
