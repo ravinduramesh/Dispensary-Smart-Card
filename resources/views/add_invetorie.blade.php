@@ -4,7 +4,7 @@
   <div class="container-fluId">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Add Invenntories</h4>
+            <h4 class="card-title">Add Inventories</h4>
             <p class="card-category">Add new inventory</p>
           </div>
           <div class="card-body">
@@ -14,7 +14,7 @@
                 <div class="col-md-12">
                   <div class="form-group {{ $errors->has('Name') ? ' has-error' : '' }}">
                     <label>Name</label>
-                    <input type="text" name="Name" class="form-control" required="required" value="">
+                    <input type="text" name="Name" class="form-control" required="required" >
                     <div class="help-block with-errors"></div>
                     @if ($errors->has('Name'))
                     <span class="help-block">
@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                   <div class="form-group {{ $errors->has('Unit_Price') ? ' has-error' : '' }}">
                     <label>Unit_Price</label>
-                    <input type="number" Unit_Price="Unit_Price" class="form-control" required="required" value="">
+                    <input type="number" name="Unit_Price" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
                     @if ($errors->has('Unit_Price'))
                     <span class="help-block">
@@ -38,7 +38,7 @@
                 <div class="col-md-12">
                   <div class="form-group {{ $errors->has('Quantity') ? ' has-error' : '' }}">
                     <label>Quantity</label>
-                    <input type="number" Quantity="Quantity" class="form-control" required="required" value="">
+                    <input type="number" name="Quantity" class="form-control" required="required" value="">
                     <div class="help-block with-errors"></div>
                     @if ($errors->has('Quantity'))
                     <span class="help-block">

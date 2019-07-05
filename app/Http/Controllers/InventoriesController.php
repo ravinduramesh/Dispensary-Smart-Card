@@ -33,6 +33,7 @@ class InventoriesController extends Controller
         //     'Unit_Price' => 'required',
         //     'Quantity' => 'required',
         // ]);
+        // return response()->json($request);
         
         $inventorie=inventorie::create([
             'Name' =>  $request->Name,
@@ -55,20 +56,18 @@ class InventoriesController extends Controller
         return redirect('get_inventorie');
     }
 
-    public function update_inventorie(Request $request, $Id)
+    public function update_inventorie(Request $request, $id)
 	{
-        $this->valIdate($request, [
+        $this->validate($request, [
             'Name' => 'required',
             'Unit_Price' => 'required',
             'Quantity' => 'required',
-		]);
-        // allergy detail
-        inventorie::find($Id)->update([
+        ]);
+        inventorie::find($id)->update([
             'Name' =>  $request->Name,
             'Unit_Price' => $request->Unit_Price,
-            'Quantity' =>$request->Quantity,
+            'Quantity' => $request->Quantity,
         ]);
-
         return redirect('get_inventorie');
 	}
   
