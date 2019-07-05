@@ -30,8 +30,8 @@
                         <td><?php echo (date("Y-m-d", strtotime($bill->created_at))) ?></td>
                         <td>
                           <a href="{{ url('/single_bill/'.$bill->id) }}" title="View Record" data-toggle="tooltip"><i class="material-icons">View</i></a>
-                          <a href="{{ url('/edit_bill/'.$bill->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
-                          <a href="{{ url('/confirmDelete/'.$bill->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
+                          <!-- <a href="{{ url('/edit_bill/'.$bill->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
+                          <a href="{{ url('/confirmDelete/'.$bill->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a> -->
                         </td>
                       </tr>
                     <?php
@@ -43,6 +43,7 @@
             </div>
           </div>
         </div>
+        <!-- <button><a href="{{ url('/add_prescription_bill/') }}" title="Add Bill" data-toggle="tooltip">Add Bill</a></button> -->
       </div>
     </div>
   </div>

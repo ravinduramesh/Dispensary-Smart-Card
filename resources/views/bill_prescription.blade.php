@@ -6,23 +6,23 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title ">Bill List</h4>
-            <p class="card-category">List of all the bills</p>
+            <h4 class="card-title ">Prescription</h4>
+            <p class="card-category"></p>
           </div>
           <div class="card-body" id="print">
           <?php
-          $bill_id;
+        //   $bill_id;
           $customer_id;
           if (isset($bills)) {
             foreach($bills as $bill)
-              $bill_id = $bill->bill_id;
-              $customer_id = $bill->customer_id;
+            $customer_id = $bill->patient_id;
+            //   $bill_id = $bill->bill_id;
           ?>
             <div class="table-responsive">
               <table class="table" id="singleBillTable">
                 <thead class=" text-primary">
-                  <th>Bill ID</th>
-                  <th><?php echo $bill_id; ?></th>
+                  <!-- <th>Bill ID</th>
+                  <th><?php //echo $bill_id; ?></th> -->
                   <th>Customer ID</th>
                   <th><?php echo $customer_id; ?></th>
                 </thead>
@@ -72,7 +72,7 @@
          	    WinPrint.document.close();
          	    WinPrint.focus();
          	    WinPrint.print();
-           	  WinPrint.close();
+           	    WinPrint.close();
            	  //window.print();
             }
           </script>
