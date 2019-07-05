@@ -22,19 +22,20 @@ class PrescriptionController extends Controller
 
     public function insert_prescription(Request $request)
 	{
+
         $this->validate($request, [
             'doctor_id' => 'required',
 			'patient_id' => 'required',
-			'description' => 'required',
+			'description' => 'required'
         ]);
         
         $prescription=Prescription::create([
             'doctor_id' => $request->doctor_id,
 			'patient_id' => $request->patient_id,
-			'description' => $request->description,
+			'description' => $request->description
         ]);
 
-        return redirect('home');
+        return redirect('prescription_list');
     }
     
     public function delete_prescription($id){
