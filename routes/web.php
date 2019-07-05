@@ -40,6 +40,7 @@ Route::get('/delete_bill/{id}', 'BillController@delete_bill')->middleware('auth'
 Route::get('/prescription_list', 'PrescriptionController@get_prescriptions')->middleware('auth');
 Route::get('/add_prescription', 'PrescriptionController@add_prescription')->middleware('auth');
 Route::get('/insert_prescription', 'PrescriptionController@insert_prescription')->middleware('auth');
+Route::get('/delete_prescription/{id}', 'PrescriptionController@delete_prescription')->middleware('auth');
 
 
 // Route::post('/update_patient/{id}', 'PatientController@update_patient')->middleware('auth');

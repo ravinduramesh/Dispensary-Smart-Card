@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Prescription;
+use App\Prescriptionitem;
 
 class PrescriptionController extends Controller
 {
@@ -33,7 +35,14 @@ class PrescriptionController extends Controller
         ]);
 
         return redirect('home');
-	}
+    }
+    
+    public function delete_prescription($id){
+		DB::table('Prescriptions')->where('id', $id)->delete();
+		DB::table('Prescriptionitems')->where('prescription_id', $id)->delete();
+
+        return redirect('prescription_list');
+    }
 
 	// public function edit_prescription($id)
     // {

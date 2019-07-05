@@ -27,40 +27,6 @@ class BillController extends Controller
 	    return view('single_bill', ['bills'=>$bills]);
     }
 
-    // public function add_bill(){
-    //     return view('add_bill');
-    // }
-
-    // public function insert_bill(Request $request){
-    //     $this->validate($request, [
-    //         'first_name' => 'required',
-	// 		'last_name' => 'required',
-	// 		'address' => 'required',
-	// 		'male' => 'required',
-	// 		'dob' => 'required',
-	// 		'nic' => 'required|unique:patients|min:10',
-	// 		'blood_group' => 'required',
-	// 		'contact' => 'required',
-    //     ]);
-        
-    //     $patient=Patient::create([
-    //         'first_name' => $request->first_name,
-	// 		'last_name' => $request->last_name,
-	// 		'address' => $request->address,
-	// 		'male' => $request->male,
-	// 		'dob' => $request->dob,
-	// 		'nic' => $request->nic,
-	// 		'blood_group' => $request->blood_group,
-	// 		'contact' => $request->contact
-    //     ]);
-
-    //     return redirect('home');
-	// }
-
-	// public function add_prescription_bill(){
-    //     return view('search_prescription');
-    // }
-
 	public function search_Prescription($p_id){
 
 		$pats = DB::table('Prescriptions')
@@ -178,17 +144,8 @@ class BillController extends Controller
 	}
 	
     public function delete_bill($id){
-		// $bill=Bills::where('id',$id)->delete();
-		// $billitem=Billitems::where('bill_id', $id)->delete();
 		DB::table('Bills')->where('id', $id)->delete();
 		DB::table('Billitems')->where('bill_id', $id)->delete();
-
-		// $bills = DB::table('Bills')
-		// ->select('Prescriptionitems.*','Inventories.name', 'Inventories.unit_price', 'Prescriptionitems.quantity', 'Prescriptions.patient_id')
-		// ->join('Inventories','Inventories.id','=','Prescriptionitems.item_id')
-		// ->join('Prescriptions','Prescriptions.id','=','Prescriptionitems.Prescription_id')
-		// ->where(['Prescriptionitems.prescription_id' => $id])
-		// ->get();
 
         return redirect('bill_list');
     }

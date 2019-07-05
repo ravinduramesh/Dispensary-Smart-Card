@@ -30,7 +30,7 @@
                         <td><?php echo ($prescription->description) ?></td>
                         <td>
                           <a href="{{ url('/edit_prescription/'.$prescription->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
-                          <a href="{{ url('/confirm_prescription/'.$prescription->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
+                          <a href="{{ url('/delete_prescription/'.$prescription->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
                         </td>
                       </tr>
                     <?php
