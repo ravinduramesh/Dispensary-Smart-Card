@@ -32,6 +32,8 @@ Route::get('/edit_allergie/{id}', 'AllergiesController@edit_allergie')->middlewa
 Route::post('/update_allergie/{id}', 'AllergiesController@update_allergie')->middleware('auth');
 Route::get('/delete_allergie/{id}', 'AllergiesController@delete_allergie')->middleware('auth');
 
+Route::get('/add_PatientAllergie/{id}', 'PatientAllergieController@add_PatientAllergie')->middleware('auth');
+Route::post('/insert_PatientAllergie/{id}', 'PatientAllergieController@insert_PatientAllergie')->middleware('auth');
 
 Route::get('/get_inventorie', 'inventoriesController@get_inventorie')->middleware('auth');
 Route::get('/add_inventorie', 'inventoriesController@add_inventorie')->middleware('auth');

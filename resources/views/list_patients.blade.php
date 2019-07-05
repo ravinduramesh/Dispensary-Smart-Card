@@ -35,6 +35,7 @@
                         <td><?php echo ($patient->blood_group) ?></td>
                         <td><?php echo ($patient->contact) ?></td>
                         <td>
+                          <a href="{{ url('/add_PatientAllergie/'.$patient->id) }}" title="Add Allergies" data-toggle="tooltip"><i class="material-icons">assignment</i></a>
                           <a href="{{ url('/edit_patient/'.$patient->id) }}" title="Update Record" data-toggle="tooltip"><i class="material-icons">update</i></a>
                           <a href="{{ url('/confirmDelete/'.$patient->id) }}" title="Delete Record" data-toggle="tooltip"><i class="material-icons">delete_forever</i></a>
                         </td>
