@@ -63,7 +63,7 @@ class InventoriesController extends Controller
             'Unit_Price' => 'required',
             'Quantity' => 'required',
         ]);
-        inventorie::find($id)->update([
+        inventorie::where('id',$id)->update([
             'Name' =>  $request->Name,
             'Unit_Price' => $request->Unit_Price,
             'Quantity' => $request->Quantity,
