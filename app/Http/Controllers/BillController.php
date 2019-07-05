@@ -176,4 +176,20 @@ class BillController extends Controller
 
         return redirect('home');
 	}
+	
+    public function delete_bill($id){
+		// $bill=Bills::where('id',$id)->delete();
+		// $billitem=Billitems::where('bill_id', $id)->delete();
+		DB::table('Bills')->where('id', $id)->delete();
+		DB::table('Billitems')->where('bill_id', $id)->delete();
+
+		// $bills = DB::table('Bills')
+		// ->select('Prescriptionitems.*','Inventories.name', 'Inventories.unit_price', 'Prescriptionitems.quantity', 'Prescriptions.patient_id')
+		// ->join('Inventories','Inventories.id','=','Prescriptionitems.item_id')
+		// ->join('Prescriptions','Prescriptions.id','=','Prescriptionitems.Prescription_id')
+		// ->where(['Prescriptionitems.prescription_id' => $id])
+		// ->get();
+
+        return redirect('bill_list');
+    }
 }
